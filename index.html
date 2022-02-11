@@ -12,13 +12,16 @@
     <div id="root">
 
         <div class="user-section">
-            <input type="text" placeholder="new to do" v-model="newToDo">
-            <button>Aggiungi</button>
+            <input @keyup.enter="addTask" type="text" placeholder="new to do" v-model="newTodoText">
+            <button @click="addTask">Aggiungi</button>
         </div>
 
         <div class="todolist">
-            <ul v-for="item in itemList">
-                <li>{{item.text}}</li>
+            <ul v-for="(item, index) in itemList">
+                <li @click="taskDone(index)">
+                    <span >{{item.text}}</span>
+                    
+                </li>
             </ul>
         </div>
 
