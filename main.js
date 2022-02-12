@@ -53,6 +53,10 @@ const app = new Vue({
 
         taskDone(index){
             this.itemList[index].done = !this.itemList[index].done;
+        },
+
+        removeTask(index){
+            this.itemList.splice(index, 1);
         }
     }
 });

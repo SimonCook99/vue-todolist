@@ -24,20 +24,38 @@ button{
 div.todolist{
     background-color: darkgray;
     width: 100%;
-    height: 70%;
     margin-top: 50px;
 }
 
-ul{
+div.todolist h1{
+    margin: 10px;
+}
+
+div.todolist ul{
     list-style: none;
     margin: 10px;
     padding: 10px;
 }
 
-li span.done{
-    text-decoration: underline;
+div.todolist li{
+    display: flex;
+    justify-content: space-between;
 }
 
-li span.undone{
+div.todolist li p{
+    width: 100%;
+}
+
+div.todolist li:hover{
+    cursor: pointer;
+}
+
+
+/* classi dello span dinamiche che cambiano in base al click*/
+li p.done{
+    text-decoration: line-through;
+}
+
+li p.undone{
     text-decoration: none;
 }
